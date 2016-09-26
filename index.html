@@ -19,14 +19,86 @@
     </section>
 
     <section class="main-content">
-      <h1>
-<a id="qrjs" class="anchor" href="#qrjs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Qrjs</h1>
+      <p>
+    </p>
+        QRjs
+        
+    
+        
+            .name{
+                text-align:center;
+                font-size:49px;
+                color:#4BAE4F;
+                padding-top:24px;
+            }
+            .down{
+             text-align: center;
+             padding-top: 20px;&lt;/p&gt;
 
-<p>QRcode of url 
-Simple url qrcode generator based on <a href="https://github.com/davidshimjs/qrcodejs">Cross-browser QRCode generator for javascript </a></p>
+&lt;pre&gt;&lt;code&gt;        }
+        .down p input{
+        margin-left:440px;
+        width: 530px;
+        margin-top:20px;
+        }
+    #qrcode{
+    margin-left: 530px;
+    }
+   .select{
+    text-align: center;
+    padding-top: 12px;
+    color:#4BAE4F;
+    font-size: 17px;
+    }
+        &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div class=&amp;quot;name&amp;quot;&amp;gt;
+        &amp;lt;b&amp;gt;QRjs&amp;lt;/b&amp;gt;
+    &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&amp;quot;down&amp;quot;&amp;gt;
 
-<h1>
-<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>demo</h1>
+             &amp;lt;div id=&amp;quot;qrcode&amp;quot;&amp;gt;
+    &amp;lt;/div&amp;gt;
+                &amp;lt;p&amp;gt; &amp;lt;input id=&amp;quot;qr&amp;quot; class=&amp;quot;form-control&amp;quot; placeholder=&amp;quot;URL&amp;quot; type=&amp;quot;text&amp;quot; onkeypress=&amp;quot;makeCode()&amp;quot; onKeyUp=&amp;quot;makeCode()&amp;quot; onchange=&amp;quot;makeCode()&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
+                &amp;lt;input type=&amp;quot;submit&amp;quot; class=&amp;quot;btn btn-raised btn-success&amp;quot; value=&amp;quot;make QRCode&amp;quot; onclick=&amp;quot;makeCode()&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;p&amp;gt;
+&amp;lt;div class=&amp;quot;select&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;QRCode Color : 
+       &lt;input id="color" name="colorpicker" type="color" &gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;        &amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;script type="text/javascript"&gt;
+
+
+function makeCode () {      
+    var getcolor = document.getElementById("color").value;
+    var Text = document.getElementById("qr").value; 
+    qrcode(Text);
+}
+
+function qrcode (text) {
+    document.getElementById("qrcode").innerHTML = "";
+    var gq = new QRCode(document.getElementById("qrcode"), {
+    width : 280,
+    height : 280,
+    colorDark: color.value,
+    colorLight: "#fafafa",
+});
+    
+    return gq.makeCode(text)
+}
+&lt;/script&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/html&gt;&lt;/p&gt;
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/MGF15/Qrjs">Qrjs</a> is maintained by <a href="https://github.com/MGF15">MGF15</a>.</span>

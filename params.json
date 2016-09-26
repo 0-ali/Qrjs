@@ -1,0 +1,6 @@
+{
+  "name": "Qrjs",
+  "tagline": "QRcode of url ",
+  "body": "# Qrjs\r\nQRcode of url \r\nSimple url qrcode generator based on [Cross-browser QRCode generator for javascript ](https://github.com/davidshimjs/qrcodejs)\r\n\r\n#demo \r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
